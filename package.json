@@ -1,7 +1,9 @@
 {
   "name": "demo-nike",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "description": "Demo project Nike Air Max",
+  "author": "Dima Soho",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
