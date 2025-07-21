@@ -1,26 +1,255 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/*
+-------------------------------------------------------------------
+THEME CONFIGURATION 
+-------------------------------------------------------------------
+*/
+
+@theme {
+  /* Custom font sizes */
+  --text-display-160: 10rem;
+  --text-display-60: 3.75rem;
+  --text-headline-96: 6rem;
+  --text-headline-64: 4rem;
+  --text-headline-56: 3.5rem;
+  --text-headline-48: 3rem;
+  --text-subtitle-40: 2.5rem;
+  --text-subtitle-32: 2rem;
+  --text-body-16: 1rem;
+  --text-caption-12: 0.75rem;
+
+  /* Custom colors */
+  --color-black: #000000;
+  --color-dark: #333333;
+  --color-gray: #888888;
+  --color-lightgray: #e8e8e8;
+  --color-white: #ffffff;
+  --color-red: #ff0000;
+  --color-rose: #b4816d;
+  --color-blue: #6990af;
+  --color-lightblue: #eff9ff;
+
+  /* Custom breakpoints */
+  --breakpoint-xsm: 360px;
+  --breakpoint-sm: 768px;
+  --breakpoint-md: 1024px;
+  --breakpoint-lg: 1440px;
+  --breakpoint-xl: 1920px;
+  --breakpoint-2xl: 2560px;
+
+  /* Font size utilities */
+  --font-size-display-160: 10rem;
+  --font-size-display-60: 3.75rem;
+  --font-size-headline-96: 6rem;
+  --font-size-headline-64: 4rem;
+  --font-size-headline-56: 3.5rem;
+  --font-size-headline-48: 3rem;
+  --font-size-subtitle-40: 2.5rem;
+  --font-size-subtitle-32: 2rem;
+  --font-size-body-16: 1rem;
+  --font-size-caption-12: 0.75rem;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+:root {
+  --background: #FFFFFF;
+  --foreground: #000000;
+}
+
+@layer components {
+  /* Register custom font classes */
+  .machina-display-160 {
+    font-family: var(--font-machina);
+    font-size: var(--text-display-160);
+    line-height: 1;
+    letter-spacing: 0;
+  }
+
+  .machina-display-60 {
+    font-family: var(--font-machina);
+    font-size: var(--text-display-60);
+    line-height: 1;
+    letter-spacing: 0;
+  }
+
+  .machina-headline-96 {
+    font-family: var(--font-machina);
+    font-size: var(--text-headline-96);
+    line-height: 1;
+    letter-spacing: 0;
+  }
+
+  .machina-headline-64 {
+    font-family: var(--font-machina);
+    font-size: var(--text-headline-64);
+    line-height: 1;
+    letter-spacing: 0;
+  }
+
+  .machina-headline-56 {
+    font-family: var(--font-machina);
+    font-size: var(--text-headline-56);
+    line-height: 1;
+    letter-spacing: 0;
+  }
+
+  .machina-headline-48 {
+    font-family: var(--font-machina);
+    font-size: var(--text-headline-48);
+    line-height: 1;
+    letter-spacing: 0;
+  }
+
+  .machina-subtitle-40 {
+    font-family: var(--font-machina);
+    font-size: var(--text-subtitle-40);
+    line-height: 1;
+    letter-spacing: 0;
+  }
+
+  .machina-subtitle-32 {
+    font-family: var(--font-machina);
+    font-size: var(--text-subtitle-32);
+    line-height: 1;
+    letter-spacing: 0;
+  }
+
+  .machina-body-16 {
+    font-family: var(--font-machina);
+    font-size: var(--text-body-16);
+    line-height: 1.5;
+    letter-spacing: 0;
+  }
+
+  .machina-caption-12 {
+    font-family: var(--font-machina);
+    font-size: var(--text-caption-12);
+    line-height: 1;
+    letter-spacing: 0;
+  }
+
+  .saol-display-160 {
+    font-family: var(--font-saol);
+    font-size: var(--text-display-160);
+    line-height: 1;
+    letter-spacing: 0;
+  }
+
+  .saol-display-60 {
+    font-family: var(--font-saol);
+    font-size: var(--text-display-60);
+    line-height: 1;
+    letter-spacing: 0;
+  }
+
+  .saol-headline-96 {
+    font-family: var(--font-saol);
+    font-size: var(--text-headline-96);
+    line-height: 1;
+    letter-spacing: 0;
+  }
+
+  .saol-headline-64 {
+    font-family: var(--font-saol);
+    font-size: var(--text-headline-64);
+    line-height: 1;
+    letter-spacing: 0;
+  }
+
+  .saol-headline-56 {
+    font-family: var(--font-saol);
+    font-size: var(--text-headline-56);
+    line-height: 1;
+    letter-spacing: 0;
+  }
+
+  .saol-headline-48 {
+    font-family: var(--font-saol);
+    font-size: var(--text-headline-48);
+    line-height: 1;
+    letter-spacing: 0;
+  }
+
+  .saol-subtitle-40 {
+    font-family: var(--font-saol);
+    font-size: var(--text-subtitle-40);
+    line-height: 1;
+    letter-spacing: 0;
+  }
+
+  .saol-subtitle-32 {
+    font-family: var(--font-saol);
+    font-size: var(--text-subtitle-32);
+    line-height: 1;
+    letter-spacing: 0;
+  }
+
+  .saol-body-16 {
+    font-family: var(--font-saol);
+    font-size: var(--text-body-16);
+    line-height: 1.5;
+    letter-spacing: 0;
+  }
+
+  .saol-caption-12 {
+    font-family: var(--font-saol);
+    font-size: var(--text-caption-12);
+    line-height: 1;
+    letter-spacing: 0;
+  }
+
+  /* Register responsive grid layout */
+  .layout-grid {
+    @apply grid grid-cols-4 gap-x-[10px] px-[15px] w-full;
+    @apply sm:grid-cols-10 sm:gap-x-[6px] sm:px-[22px];
+    @apply md:grid-cols-12 md:gap-x-[8px] md:px-[24px];
+    @apply lg:grid-cols-12 lg:gap-x-[12px] lg:px-[36px];
+    @apply xl:grid-cols-12 xl:gap-x-[16px] xl:px-[50px];
+    @apply 2xl:grid-cols-12 2xl:gap-x-[21px] 2xl:px-[66px] 2xl:max-w-[2560px] 2xl:mx-auto;
+  }
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #000000;
+    --foreground: #FFFFFF;  
   }
 }
 
+/*
+-------------------------------------------------------------------
+GENERAL STYLES 
+-------------------------------------------------------------------
+*/
+
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-machina), Arial, Helvetica, sans-serif;
+  font-size: var(--text-body-16);
+  line-height: 1.5;
+  letter-spacing: 0;
+}
+
+p,
+li,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-machina);
+  color: var(--foreground);
+}
+
+p {
+  font-size: var(--text-body-16);
+  line-height: 1.5;
+}
+
+small {
+  font-size: var(--text-caption-12);
+  line-height: 1;
 }
