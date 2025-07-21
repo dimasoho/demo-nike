@@ -1,14 +1,18 @@
-import Image from "next/image";
+"use client"
+
+import Intro from "./components/sections/Intro";
+
+
 
 export default function Home() {
+
+
+
   return (
-    <section className="layout-grid py-32">
-      <p className="">
-        Hello World!
-
-      </p>
-    </section>
+    <main>
+      <div style={{ height: "100vh" }}></div>
+      <Intro />
+      <div style={{ height: "100vh" }}></div>
+    </main>
   );
-
-
 }

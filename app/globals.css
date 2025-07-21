@@ -52,7 +52,7 @@ THEME CONFIGURATION
 }
 
 :root {
-  --background: #FFFFFF;
+  --background: #ffffff;
   --foreground: #000000;
 }
 
@@ -200,19 +200,19 @@ THEME CONFIGURATION
 
   /* Register responsive grid layout */
   .layout-grid {
-    @apply grid grid-cols-4 gap-x-[10px] px-[15px] w-full;
+    @apply grid w-full grid-cols-4 gap-x-[10px] px-[15px];
     @apply sm:grid-cols-10 sm:gap-x-[6px] sm:px-[22px];
     @apply md:grid-cols-12 md:gap-x-[8px] md:px-[24px];
     @apply lg:grid-cols-12 lg:gap-x-[12px] lg:px-[36px];
     @apply xl:grid-cols-12 xl:gap-x-[16px] xl:px-[50px];
-    @apply 2xl:grid-cols-12 2xl:gap-x-[21px] 2xl:px-[66px] 2xl:max-w-[2560px] 2xl:mx-auto;
+    @apply 2xl:mx-auto 2xl:max-w-[2560px] 2xl:grid-cols-12 2xl:gap-x-[21px] 2xl:px-[66px];
   }
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #000000;
-    --foreground: #FFFFFF;  
+    --foreground: #ffffff;
   }
 }
 
@@ -231,19 +231,6 @@ body {
   letter-spacing: 0;
 }
 
-p,
-li,
-span,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: var(--font-machina);
-  color: var(--foreground);
-}
-
 p {
   font-size: var(--text-body-16);
   line-height: 1.5;
@@ -252,4 +239,10 @@ p {
 small {
   font-size: var(--text-caption-12);
   line-height: 1;
+}
+
+/* Animations performance */
+.split-word {
+  font-kerning: none;
+  will-change: transform, opacity;
 }
